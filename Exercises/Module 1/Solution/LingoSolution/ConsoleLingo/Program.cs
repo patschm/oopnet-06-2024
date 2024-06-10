@@ -38,7 +38,7 @@
             {
                 Console.WriteLine("{0}e beurt. Geef een woord", attempt);
                 string? guess = Console.ReadLine();
-                if (guess!.Length != MAX_WORD_LENGTH)
+                if (guess?.Length != MAX_WORD_LENGTH)
                 {
                     Console.WriteLine("Ongeldig woord");
                     continue;
@@ -50,6 +50,8 @@
                 }
                 Console.WriteLine("Niet juist");
             }
+
+
             switch (attempt)
             {
                 case 1:
