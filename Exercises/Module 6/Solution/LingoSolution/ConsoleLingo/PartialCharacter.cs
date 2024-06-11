@@ -11,9 +11,6 @@
             Console.Write(Character);
             Console.ResetColor();
         }
-        public static new PartialCharacter Create(char c, int i)
-        {
-            return new PartialCharacter { Character = c, Position = i };
-        }
+      
     }
 }

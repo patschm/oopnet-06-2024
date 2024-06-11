@@ -61,7 +61,9 @@ namespace ConsoleLingo
                     if (LingoCharacter.ExactlyEqual(targetChar, guessChar))
                     {
                         counter.DecrementCharacterCount(targetChar);
-                        guess[i] = ExactCharacter.Create(guessChar.Character, guessChar.Position);
+                        guess[i] = new ExactCharacter { 
+                            Character = guessChar.Character, 
+                            Position = guessChar.Position };
                     }
                 }
             }
@@ -76,7 +78,9 @@ namespace ConsoleLingo
                         LingoCharacter.PartialEqual(thisChar, guessChar))
                     {
                         counter.DecrementCharacterCount(thisChar);
-                        guess[i] = PartialCharacter.Create(guessChar.Character, guessChar.Position);
+                        guess[i] = new PartialCharacter { 
+                            Character = guessChar.Character, 
+                            Position = guessChar.Position };
                     }
                 }
             }
@@ -106,7 +110,7 @@ namespace ConsoleLingo
             this.internalWord = new LingoCharacter[word!.Length];
             for(int i = 0; i < word.Length;i++)
             {
-                LingoCharacter ch = LingoCharacter.Create(word[i], i);
+                LingoCharacter ch = new LingoCharacter { Position = i, Character = word[i] };
                 this.internalWord[i] = ch;
             }
         }

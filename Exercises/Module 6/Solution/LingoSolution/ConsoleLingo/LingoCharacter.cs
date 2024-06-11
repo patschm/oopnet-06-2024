@@ -52,9 +52,6 @@
             Console.ResetColor();
         }
         
-        public static LingoCharacter Create(char c, int i)
-        {
-            return new LingoCharacter { Character = c, Position = i };
-        }
+      
     }
 }
