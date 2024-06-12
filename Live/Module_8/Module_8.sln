@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HansKlok", "HansKlok\HansKlok.csproj", "{F07C5530-C0A0-431A-9389-E00F347D93B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HansKlok", "HansKlok\HansKlok.csproj", "{F07C5530-C0A0-431A-9389-E00F347D93B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Templates", "Templates\Templates.csproj", "{9BEB82F4-41E3-4E6F-9EDD-F376E4E72ED5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{F07C5530-C0A0-431A-9389-E00F347D93B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F07C5530-C0A0-431A-9389-E00F347D93B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F07C5530-C0A0-431A-9389-E00F347D93B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BEB82F4-41E3-4E6F-9EDD-F376E4E72ED5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BEB82F4-41E3-4E6F-9EDD-F376E4E72ED5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BEB82F4-41E3-4E6F-9EDD-F376E4E72ED5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BEB82F4-41E3-4E6F-9EDD-F376E4E72ED5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
