@@ -17,7 +17,7 @@ namespace WebLingo.Controllers
                                     "oases", "onwel", "polis", "preek", "quota", "quark", "ruzie", "schat",
                                     "treur", "typen", "uniek", "ultra", "vloer", "vorst", "wreed", "wazig",
                                     "xenon", "yacht", "yucca", "zomer", "zagen"};
-
+        private JsonSerializerSettings settings = new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.All };
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
@@ -29,7 +29,7 @@ namespace WebLingo.Controllers
             model.WordToBeGuessed = GenerateWord();
             model.Finished = false;
             model.Attempt = 1;
-            HttpContext.Session.SetString("game", JsonConvert.SerializeObject(model));
+            HttpContext.Session.SetString("game", JsonConvert.SerializeObject(model, settings));
             return View(model);
             
         }
@@ -42,7 +42,7 @@ namespace WebLingo.Controllers
             {
                 return RedirectToAction("Index");
             }
-            LingoModel? model = JsonConvert.DeserializeObject<LingoModel>(sModel);
+            LingoModel? model = JsonConvert.DeserializeObject<LingoModel>(sModel, settings);
             if (model == null)
             {
                 return RedirectToAction("Index");
@@ -58,7 +58,7 @@ namespace WebLingo.Controllers
                 model.Finished = true;
             }
             model.Attempt++;
-            HttpContext.Session.SetString("game", JsonConvert.SerializeObject(model));
+            HttpContext.Session.SetString("game", JsonConvert.SerializeObject(model, settings));
             return View(model);
         }
         private static LingoWord GenerateWord()
